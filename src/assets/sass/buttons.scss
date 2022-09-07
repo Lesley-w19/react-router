@@ -1,0 +1,26 @@
+@import "./colors.scss";
+
+.btn-primary {
+  background-color: $primary;
+}
+.btn-secondary {
+  background-color: $secondary;
+}
+.btn-success {
+  background-color: $success;
+}
+.btn-info {
+  background-color: $info;
+}
+.btn-warning {
+  background-color: $warning;
+}
+.btn-danger {
+  background-color: $danger;
+}
+.btn-light {
+  background-color: $light;
+}
+.btn-dark {
+  background-color: $dark;
+}
