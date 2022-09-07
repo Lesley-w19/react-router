@@ -1,13 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Navbar = () => {
+  let activeStyle = {
+    color: "crimson",
+    fontWeight: "bold",
+    textDecoration: "none",
+  };
+  let linkStyle = {
+    color: "black",
+    textDecoration: "none",
+  };
   return (
-    <React.Fragment>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-    </React.Fragment>
+    <>
+      <NavLink
+        to="/"
+        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="about"
+        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="contact"
+        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+      >
+        Contact
+      </NavLink>
+      <Outlet />
+    </>
   );
 };
 export default Navbar;
