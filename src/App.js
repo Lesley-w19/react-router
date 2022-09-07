@@ -1,19 +1,22 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import PageNotFound from "./pages/PageNotFound";
 const App = () => {
   return (
     <div className="App">
       {/* <h1>react router</h1> */}
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
       </Routes>
     </div>
   );
