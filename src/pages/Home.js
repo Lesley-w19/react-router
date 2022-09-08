@@ -9,12 +9,13 @@ const Home = () => {
   };
   return (
     <Fragment>
-      <div style={styleHome}>
-        <h1>Home page</h1>
-        <p> This is the Home page</p>
+      <div className="wrapper" style={styleHome}>
+        <div className="home">
+          <h1>Home page</h1>
+          <p> This is the Home page</p>
+        </div>
       </div>
     </Fragment>
   );
 };
 export default Home;
- 
