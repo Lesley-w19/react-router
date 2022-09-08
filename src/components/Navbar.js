@@ -5,33 +5,41 @@ const Navbar = () => {
   let activeStyle = {
     color: "crimson",
     fontWeight: "bold",
+    margin: "1px 20px",
     textDecoration: "none",
   };
   let linkStyle = {
-    color: "black",
     textDecoration: "none",
+    margin: "1px 20px",
   };
   return (
     <>
-      <NavLink
-        to="/"
-        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="about"
-        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
-      >
-        About
-      </NavLink>
-      <NavLink
-        to="contact"
-        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
-      >
-        Contact
-      </NavLink>
-      <Outlet />
+      <div className="nav">
+        <div className="nav__wrapper">
+          <NavLink
+            to="/"
+            className="nav__link"
+            style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="about"
+            className="nav__link"
+            style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="contact"
+            className="nav__link"
+            style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+          >
+            Contact
+          </NavLink>
+        </div>
+        <Outlet />
+      </div>
     </>
   );
 };
