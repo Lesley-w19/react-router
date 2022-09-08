@@ -3,9 +3,9 @@ import Calculate from "./Calculate";
 const Population = () => {
   return (
     <React.Fragment>
-      <div>
+      <div className="population">
         <h1>Population</h1>
-        <div>
+        <div className="population__wrapper">
           <Calculate label="Class 1" total={360} score={203} />
           <Calculate label="Class 2" total={206} />
           <Calculate label="Class 3" score={107} />
