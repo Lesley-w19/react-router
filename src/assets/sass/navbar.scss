@@ -1,0 +1,14 @@
+@import "./mixins";
+@import "./colors.scss";
+
+.nav {
+  &__wrapper {
+    min-height: 10vh;
+    @include display(flex, center, center, row);
+    padding: 10px 20px;
+    background-color: $gray-900;
+  }
+  &__link {
+    color: $light;
+  }
+}
