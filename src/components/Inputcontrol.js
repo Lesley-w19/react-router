@@ -50,17 +50,19 @@ const InputControl = ({ name, label, placeholder }) => {
   };
 
   return (
-    <div controlId="searchValue">
-      <label>{label}</label>
-      <div
-        className="input-control"
-        type="text"
-        value={searchValue}
-        name={name}
-        onChange={handleSearch}
-        autoComplete="off"
-        placeholder={placeholder}
-      />
+    <>
+      <form className="form" controlId="searchValue">
+        <label className="form__label">{label}</label>
+        <input
+          className="form__control"
+          type="text"
+          value={searchValue}
+          name={name}
+          onChange={handleSearch}
+          autoComplete="off"
+          placeholder={placeholder}
+        />{" "}
+      </form>
       <div ref={countryRef}>
         {isVisible && (
           <AutoComplete
@@ -70,13 +72,16 @@ const InputControl = ({ name, label, placeholder }) => {
           />
         )}
       </div>
-      {selectedCountry && (
-        <div className="selected-country">
+      <div className="form__output">
+  {selectedCountry && (
+        <div className="form__output__value">
           Your selected country: {selectedCountry}
         </div>
       )}
-      {error && <p className="error">{error}</p>}
-    </div>
+      {error && <p className="form__output__error">{error}</p>}
+      </div>
+    
+    </>
   );
 };
 
