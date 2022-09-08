@@ -1,0 +1,60 @@
+.contact {
+  padding: 10px;
+  .main {
+    width: 80%;
+    margin: 20px auto;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    margin: 40px 10px;
+  }
+
+  //autocomplete
+  .suggestion {
+    padding: 10px 20px;
+
+    &__box {
+      position: absolute;
+      z-index: 1;
+      background-color: #f9e9ef;
+      color: #000;
+      border: 1px solid $dark;
+      width: 70% !important;
+      height: 150px;
+      overflow: auto;
+      display: none;
+      padding: 10px 20px;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        border-bottom: 1px solid #adb5bb;
+        padding: 4px;
+        cursor: pointer;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+  .search-form {
+    width: 100%;
+  }
+}
