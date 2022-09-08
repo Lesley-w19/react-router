@@ -1,0 +1,24 @@
+@import "./mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: left;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: column;
+}
