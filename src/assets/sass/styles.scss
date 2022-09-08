@@ -1,16 +1,7 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 2px;
-  font-weight: bold;
-  color: #fff;
-  border: none;
-  text-transform: uppercase;
-}
+@import "./universal.scss";
 @import "./form.scss";
 @import "./buttons.scss";
+@import "./navbar.scss";
+@import "./calculate.scss";
+@import "./contact.scss";
+@import "./home.scss"
