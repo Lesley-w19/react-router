@@ -1,0 +1,23 @@
+@import "./mixins";
+@import "./colors.scss";
+
+.population {
+  padding: 20px 30px;
+  &__wrapper {
+    @include display(flex, space-around, center, row);
+    flex-wrap: wrap;
+    margin: 5px;
+  }
+}
+.calculate {
+  @include display(flex, space-evenly, center, column);
+  padding: 20px 30px;
+  border: 1px solid $warning;
+  h6 {
+    margin: 10px auto;
+  }
+  span {
+    letter-spacing: 1px;
+    color: $primary;
+  }
+}
